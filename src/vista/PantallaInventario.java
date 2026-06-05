@@ -114,9 +114,7 @@ public class PantallaInventario extends JFrame {
                 txtInventario.setText(datos);
             }
         });
-        // --- FIN DE LA LÓGICA ---
-        
-     // --- INICIO DE LA LÓGICA DEL BOTÓN GUARDAR (ACTUALIZADA) ---
+
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -126,13 +124,11 @@ public class PantallaInventario extends JFrame {
                 String precioStr = txtPrecio.getText().trim().replace(",", "."); 
                 String stockStr = txtStock.getText().trim();
 
-                // 1. NUEVA VALIDACIÓN: Solo ID y Precio son obligatorios
                 if (id.isEmpty() || precioStr.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "El ID y el Precio de Venta son campos obligatorios.", "Faltan datos", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
 
-                // 2. AUTOCOMPLETADO INTELIGENTE: Si dejaron campos vacíos, les ponemos valores por defecto
                 if (nombre.isEmpty()) {
                     nombre = "Sin descripción";
                 }
@@ -169,12 +165,10 @@ public class PantallaInventario extends JFrame {
             }
         });
       
-        // Al establecer el botón por defecto, al presionar Enter en cualquier campo de texto, se accionará este botón.
         this.getRootPane().setDefaultButton(btnGuardar);
-        // --- FIN DE LA LÓGICA ---
-        
-        // Atajo de teclado: Enter para guardar
+
+        //Enter para guardar
         this.getRootPane().setDefaultButton(btnGuardar);
-        // --- FIN DE LA LÓGICA ---
+
     }
 }

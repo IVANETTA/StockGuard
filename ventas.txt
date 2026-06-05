@@ -24,3 +24,4 @@
 04/06/2026 17:50, Venta del articulo: 03, Forma de pago:CREDITO PERSONAL, con entrega de: 10000.0
 04/06/2026 18:05, Venta del articulo: 04, Forma de pago:CREDITO PERSONAL, con entrega de: 20000.0
 04/06/2026 18:11, Venta del articulo: 02, Forma de pago:CREDITO PERSONAL, con entrega de: 30000.0
+05/06/2026 12:15, Venta del articulo: 03, Forma de pago:CREDITO PERSONAL, con entrega de: 10000.0
