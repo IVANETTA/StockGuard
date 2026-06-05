@@ -17,3 +17,10 @@
 03/06/2026 10:16, Venta del articulo: 03, Forma de pago:CONTADO, con entrega de: 20000.0
 03/06/2026 16:27, Venta del articulo: 07, Forma de pago:CONTADO, con entrega de: 45000.0
 03/06/2026 16:27, Venta del articulo: 05, Forma de pago:CREDITO PERSONAL, con entrega de: 10000.0
+04/06/2026 17:01, Venta del articulo: 02, Forma de pago:CREDITO PERSONAL, con entrega de: 20000.0
+04/06/2026 17:09, Venta del articulo: 02, Forma de pago:CREDITO PERSONAL, con entrega de: 30000.0
+04/06/2026 17:13, Venta del articulo: 01, Forma de pago:CREDITO PERSONAL, con entrega de: 20000.0
+04/06/2026 17:16, Venta del articulo: 08, Forma de pago:CONTADO, con entrega de: 25000.0
+04/06/2026 17:50, Venta del articulo: 03, Forma de pago:CREDITO PERSONAL, con entrega de: 10000.0
+04/06/2026 18:05, Venta del articulo: 04, Forma de pago:CREDITO PERSONAL, con entrega de: 20000.0
+04/06/2026 18:11, Venta del articulo: 02, Forma de pago:CREDITO PERSONAL, con entrega de: 30000.0

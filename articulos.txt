@@ -1,9 +1,10 @@
-01, pantalon jean 36,jean,35000.0,26
-02, short jean  42,jean,70000.0,39
-03,remera azul, remeras, 20000.0,28
-04, cartera,carteras , 40000.0,19
+01, pantalon jean 36,jean,35000.0,25
+02, short jean  42,jean,70000.0,36
+03,remera azul, remeras, 20000.0,27
+04, cartera,carteras , 40000.0,18
 05, billetera roja grande , billeteras, 25000.0,34
 06 , remera negra modal, remeras, 20000.0,30
 07, cartera chica rosa, carteras, 45000.0,39
 15,Sin descripción,PANTALON,40000.0,1
-08,remera azul,REMERA,25000.0,1
+08,remera azul,REMERA,25000.0,0
+10,short,JEAN,23000.0,1

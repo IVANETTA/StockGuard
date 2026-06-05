@@ -13,6 +13,8 @@ public class PantallaEstadisticas extends JFrame {
     public PantallaEstadisticas() {
         // configuramos la ventana
         this.setTitle("StockGuard - Estadísticas Financieras");
+        java.awt.Image icono = java.awt.Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icono.png"));
+        this.setIconImage(icono);
         this.setSize(650, 500); 
         this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout(15, 15));

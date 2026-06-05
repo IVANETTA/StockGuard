@@ -17,6 +17,8 @@ public class PantallaLogin extends JFrame {
     public PantallaLogin() {
         // Configuro visualmente la ventana
         this.setTitle("StockGuard - Inicio de Sesión");
+        java.awt.Image icono = java.awt.Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icono.png"));
+        this.setIconImage(icono);
         this.setSize(350, 250);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null); 

@@ -320,7 +320,6 @@ public class GestorArchivos {
     
                 if(datos.length >= 4) {
                     String fecha = datos[0].trim();
-                    //cortamos el texto y nos quedamos solo con lo que está después de los ":"
                     String metodo = datos[2].substring(datos[2].indexOf(":") + 1).trim();
                     String monto = datos[3].substring(datos[3].indexOf(":") + 1).trim();
                     
@@ -338,7 +337,7 @@ public class GestorArchivos {
         return lista.toString();
     }
 
-    // Método calcular el monto ingresado
+    //metodopara realizar el calculo
     public static double calcularTotalRecaudado() {
         double total = 0.0;
         try (java.io.BufferedReader lector = new java.io.BufferedReader(new java.io.FileReader("ventas.txt"))) {
@@ -347,7 +346,6 @@ public class GestorArchivos {
                 String[] datos = linea.split(",");
                 if(datos.length >= 4) {
                     try {
-                        // Atrapamos SOLO el número (10000.0) ignorando el texto "con entrega de:"
                         String montoStr = datos[3].substring(datos[3].indexOf(":") + 1).trim();
                         total += Double.parseDouble(montoStr); 
                     } catch (NumberFormatException ex) {
@@ -359,6 +357,46 @@ public class GestorArchivos {
             // Si el archivo no existe da 0.0
         }
         return total;
+    }
+ // metodo para buscar al cliente y acualizar la deuda
+    public static boolean actualizarDeudaCliente(String dniBuscado, double montoDeudaASumar) {
+        java.io.File archivo = new java.io.File("clientes.txt");
+        java.io.File temporal = new java.io.File("clientes_temp.txt");
+        boolean encontrado = false;
+
+        try {
+            //si el archivo no existe creamos uno nuevo
+            if (!archivo.exists()) {
+                archivo.createNewFile();
+            }
+
+            java.io.BufferedReader lector = new java.io.BufferedReader(new java.io.FileReader(archivo));
+            java.io.BufferedWriter escritor = new java.io.BufferedWriter(new java.io.FileWriter(temporal));
+
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] datos = linea.split(",");
+                if (datos.length >= 4 && datos[0].trim().equals(dniBuscado.trim())) {
+                    //si encontramos el dni le sumamos la deuda
+                    double deudaActual = Double.parseDouble(datos[3].trim());
+                    double nuevaDeuda = deudaActual + montoDeudaASumar;
+                    escritor.write(datos[0] + "," + datos[1] + "," + datos[2] + "," + nuevaDeuda + "\n");
+                    encontrado = true;
+                } else {
+                    escritor.write(linea + "\n");
+                }
+            }
+            lector.close();
+            escritor.close();
+
+            //reemplazamos el archivo viejo por el actualizado
+            archivo.delete();
+            temporal.renameTo(archivo);
+
+        } catch (Exception e) {
+            return false; 
+        }
+        return encontrado;
     }
     }
     

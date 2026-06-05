@@ -11,6 +11,8 @@ public class Dashboard extends JFrame {
     	
         //configuración de la ventana
         this.setTitle("StockGuard - Panel Principal | " + rol);    
+        java.awt.Image icono = java.awt.Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icono.png"));
+        this.setIconImage(icono);
         this.setSize(800, 600); 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);

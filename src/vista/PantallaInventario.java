@@ -13,6 +13,8 @@ public class PantallaInventario extends JFrame {
     public PantallaInventario() {
         // Configuración de la ventana
         this.setTitle("StockGuard - Gestión de Inventario");
+        java.awt.Image icono = java.awt.Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icono.png"));
+        this.setIconImage(icono);
         this.setSize(750, 600); 
         this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout(10, 10));
